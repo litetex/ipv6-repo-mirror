@@ -11,6 +11,6 @@ jobs:
 
     steps:
       - run: |
-          git clone --bare https://github.com/ohmyzsh/ohmyzsh.git
+          git clone --bare https://github.com/ohmyzsh/ohmyzsh.git --single-branch
           cd ohmyzsh.git
           git push --mirror https://litetex:${{ secrets.CB_TOKEN }}@codeberg.org/litetex/ohmyzsh.git
