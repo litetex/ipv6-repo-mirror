@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - run: |
-          git clone --bare https://github.com/ohmyzsh/ohmyzsh.git --single-branch
+          git clone --bare https://github.com/ohmyzsh/ohmyzsh.git --single-branch --branch master
           cd ohmyzsh.git
           echo "Clone successful - Starting push"
           git push --mirror https://litetex:${{ secrets.CB_TOKEN }}@codeberg.org/litetex/ohmyzsh.git
