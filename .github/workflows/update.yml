@@ -1,0 +1,16 @@
+name: Updater
+
+on:
+  schedule:
+    - cron: '33 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          git clone --bare https://github.com/ohmyzsh/ohmyzsh.git
+          cd ohmyzsh.git
+          git push --mirror https://litetex:{CB_TOKEN}@codeberg.org/litetex/ohmyzsh.git
