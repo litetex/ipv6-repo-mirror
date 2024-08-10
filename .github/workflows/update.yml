@@ -2,17 +2,21 @@ name: Updater
 
 on:
   schedule:
-    - cron: '33 3 * * *'
+    - cron: '3 23 * * *'
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        include:
+          - source: ohmyzsh/ohmyzsh
+            target: ohmyzsh
     steps:
       - run: |
-          git clone --bare https://github.com/ohmyzsh/ohmyzsh.git --single-branch
+          git clone --bare https://github.com/${{ matrix.source }}.git --single-branch
           cd ohmyzsh.git
           echo "Clone successful - Starting push"
-          git push --mirror https://litetex:${{ secrets.CB_TOKEN }}@codeberg.org/litetex/ohmyzsh.git
+          git push --mirror https://litetex:${{ secrets.CB_TOKEN }}@codeberg.org/litetex/${{ matrix.target }}.git
           echo "Done"
