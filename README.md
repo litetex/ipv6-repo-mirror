@@ -3,4 +3,4 @@ Mirrors repos to a platform that has IPv6 support because [GitHub still has not]
 
 | Project | Target | Related |
 | --- | --- | --- |
-| [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) | [ohmyzsh](https://codeberg.org/litetex/ohmyzsh) | [https://github.com/gethomepage/homepage/discussions/3527](https://github.com/ohmyzsh/ohmyzsh/issues/12609) |
+| [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) | [ohmyzsh](https://codeberg.org/litetex/ohmyzsh) | https://github.com/ohmyzsh/ohmyzsh/issues/12609 |
