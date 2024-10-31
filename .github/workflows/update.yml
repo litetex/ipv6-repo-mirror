@@ -16,7 +16,7 @@ jobs:
     steps:
       - run: |
           git clone --bare https://github.com/${{ matrix.source }}.git --single-branch
-          cd ohmyzsh.git
+          cd ${{ matrix.target }}.git
           echo "Clone successful - Starting push"
           git push --mirror https://litetex:${{ secrets.CB_TOKEN }}@codeberg.org/litetex/${{ matrix.target }}.git
           echo "Done"
