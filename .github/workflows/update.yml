@@ -13,6 +13,8 @@ jobs:
         include:
           - source: ohmyzsh/ohmyzsh
             target: ohmyzsh
+          - source: testflows/testflows-github-hetzner-runners
+            target: testflows-github-hetzner-runners
     steps:
       - run: |
           git clone --bare https://github.com/${{ matrix.source }}.git --single-branch
